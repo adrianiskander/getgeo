@@ -1,4 +1,4 @@
-GETGEO | Get Your Current Geographic Location
+<h1>GETGEO | Get Your Current Geographic Location</h1>
 
 <h3>Live Demo: <a href="https://getgeo.adrianiskander.com">getgeo.adrianiskander.com</a></h3>
 
