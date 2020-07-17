@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+  <meta name="description" content="GETGEO | Get Your Current Geographic Location">
+
+  <title>GETGEO | Get Your Current Geographic Location</title>
+
+  <link rel="stylesheet" type="text/css" href="./static/css/style.css">
+</head>
+<body class="text-dark">
+
+
+  <div id="app">
+    <navbar-component v-bind:client="client"></navbar-component>
+    <leafmap-component ref="leafmap"></leafmap-component>
+  </div>
+
+
+  <template id="leafmap-template">
+    <div class="h-100vh w-100 z-index-1">
+      <div id="leafmap" class="h-100 w-100 z-index-1" ref="leafmap"></div>
+    </div>
+  </template>
+
+
+  <template id="navbar-template">
+    <div>
+
+      <div class="Navbar-link Navbar-brand bg-darkred border-radius text-white">
+        <strong class="selection-transparent">GETGEO</strong>
+      </div>
+
+      <nav class="Navbar">
+
+        <div id="btn-zoomout" class="Navbar-link Navbar-icon bg-light border-radius shadow"
+          v-on:click="controlLeafmap">
+            ―
+        </div>
+        <div id="btn-zoomin" class="Navbar-link Navbar-icon bg-light border-radius shadow"
+          name="btn-zoomin"
+          v-on:click="controlLeafmap">
+            +
+        </div>
+
+        <label class="Navbar-link Navbar-modal-open border-radius bg-light shadow text-dark" for="navbar-modal-toggle">
+          <span class="d-none d-md-flex text-uppercase sele">Settings</span>
+          <span class="ml-md-3 selection-transparent" style="font-size: 21.875px;">☰</span>
+        </label>
+        <input id="navbar-modal-toggle" class="Navbar-link" type="checkbox" />
+
+        <div class="Navbar-modal bg-light shadow text-dark">
+
+          <label class="Navbar-link Navbar-modal-close text-dark" for="navbar-modal-toggle">
+            <span class="selection-transparent" style="font-size: 21.875px;">✕</span>
+          </label>
+
+          <ul class="flex-col list-style-none m-0 p-0 w-100">
+            <li>
+              <label class="Navbar-link Navbar-modal-link bg-white-hover text-dark-hover">
+                Live Update
+                <input
+                  type="checkbox"
+                  name="isAutoUpdating"
+                  v-model="isAutoUpdating"
+                  v-on:change="toggleOption"
+                />
+                <span class="Navbar-modal-link-checkbox"></span>
+              </label>
+            </li>
+            <li>
+              <label class="Navbar-link Navbar-modal-link bg-white-hover text-dark-hover">
+                Auto Center
+                <input
+                  type="checkbox"
+                  name="isAutoCentering"
+                  v-model="isAutoCentering"
+                  v-on:change="toggleOption"
+                />
+                <span class="Navbar-modal-link-checkbox"></span>
+              </label>
+            </li>
+            <li>
+              <label class="Navbar-link Navbar-modal-link bg-white-hover text-dark-hover">
+                Show Accuracy
+                <input
+                  type="checkbox"
+                  name="isAccuracyVisible"
+                  v-model="isAccuracyVisible"
+                  v-on:change="toggleOption"
+                />
+                <span class="Navbar-modal-link-checkbox"></span>
+              </label>
+            </li>
+          </ul>
+
+          <footer class="Navbar-modal-footer">
+            <div>Design and Programming:</div>
+            <a class="text-dark text-decoration-none" href="https://adrianiskander.com">
+              <strong>&copy;2020 Adrian Iskander</strong>
+            </a>
+          </footer>
+        </div>
+      </nav>
+    </div>
+  </template>
+
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.6.0/leaflet.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.6.0/leaflet.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+  <script type="text/javascript" src="./static/js/app.js"></script>
+</body>
+</html>

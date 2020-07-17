@@ -1,0 +1,180 @@
+.Navbar {
+  position: fixed;
+  right: 0px;
+  top: 12.5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 50px;
+  padding-left: 6.25px;
+  padding-right: 6.25px;
+  z-index: 10;
+}
+
+.Navbar-brand {
+  position: fixed;
+  left: 6.25px;
+  top: 12.5px;
+
+  z-index: 10;
+}
+
+.Navbar-icon {
+  position: relative;
+
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 25px;
+  line-height: 0px;
+  height: 50px;
+  width: 50px;
+}
+
+.Navbar-icon::selection {
+  background: transparent;
+}
+
+.Navbar-icon:hover {
+  cursor: pointer;
+}
+
+.Navbar-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: inherit;
+  font-weight: bold;
+  height: 50px;
+  line-height: 1;
+  max-height: 50px;
+
+  margin-left: 6.25px;
+  margin-right: 6.25px;
+  padding-left: 12.5px;
+  padding-right: 12.5px;
+  text-decoration: none;
+}
+
+.Navbar-link:hover {
+  background-color: darkred;
+  color: white;
+  cursor: pointer;
+  transition-duration: 60ms;
+  transition-timing-function: ease-in-out;
+}
+
+.Navbar-link::selection {
+  background: transparent;
+}
+
+.Navbar-modal {
+  position: fixed;
+  right: -100%;
+  top: 0px;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+  width: 100%;
+
+  opacity: 0;
+  padding-top: 75px;
+  transition-duration: 60ms;
+  transition-timing-function: ease-in-out;
+  z-index: 12;
+}
+
+.Navbar-modal-footer {
+  position: absolute;
+  bottom: 25px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.Navbar-modal-link {
+  justify-content: space-between;
+
+  margin: 0px;
+  padding-left: 25px !important;
+  padding-right: 25px !important;
+}
+
+.Navbar-modal-link input {
+  opacity: 0;
+}
+
+.Navbar-modal-link input:checked + .Navbar-modal-link-checkbox {
+  background-color: mediumseagreen;
+  border: none;
+}
+
+.Navbar-modal-link-checkbox {
+  border: 3.125px solid darkslategray;
+  border-radius: 12.5px;
+  height: 21.875px;
+  width: 21.875px;
+}
+
+.Navbar-modal-close {
+  position: absolute;
+  right: 12.5px;
+  top: 12.5px;
+
+  border-radius: 25px;
+  margin: 0px;
+  padding: 0px;
+  width: 50px;
+}
+
+.Navbar-modal-close::selection,
+.Navbar-modal-open::selection {
+  background: transparent;
+}
+
+.Navbar-modal-open {
+  height: 50px;
+  width: 50px;
+}
+
+#navbar-modal-toggle {
+  position: fixed;
+  right: 12.5px;
+  top: 12.5px;
+
+  height: 50px;
+  width: 50px;
+  opacity: 0;
+
+  z-index: -1;
+}
+
+#navbar-modal-toggle:checked + .Navbar-modal {
+  right: 0px;
+  opacity: 1;
+}
+
+@media (min-width: 1024px) {
+  .Navbar-link {
+    padding-left: 18.75px;
+    padding-right: 18.75px;
+  }
+
+  .Navbar-modal {
+    width: 25%;
+  }
+
+  .Navbar-modal-open {
+    width: auto;
+  }
+}
