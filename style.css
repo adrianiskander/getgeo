@@ -1,7 +1,7 @@
-@import url('./container.css');
-@import url('./flex.css');
-@import url('./front.css');
-@import url('./navbar.css');
+@import url('./css/container.css');
+@import url('./css/flex.css');
+@import url('./css/front.css');
+@import url('./css/navbar.css');
 
 * {
   box-sizing: border-box;

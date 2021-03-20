@@ -1,10 +1,10 @@
 <h1>GETGEO | Get Your Current Geographic Location</h1>
 
-<h3>Live Demo: <a href="https://getgeo.adrianiskander.com">getgeo.adrianiskander.com</a></h3>
+<h3>Live Demo: <a href="https://getgeo.ct8.pl" target="_new">getgeo.ct8.pl</a></h3>
 
-<a href="https://getgeo.adrianiskander.com">
+<a href="https://getgeo.ct8.pl" target="_new">
   <img
-    src="https://getgeo.adrianiskander.com/static/assets/images/getgeo_web_front.png"
+    src="https://static.ct8.pl/images/getgeo_web_front.png"
     alt="GETGEO | Get Your Current Geographic Location"
     style="width: 100%;"
   />
@@ -13,7 +13,7 @@
 <h3>Made With:</h3>
 <ul>
   <li>HTML5 Geolocation API</li>
-  <li>Leaflet</li>
+  <li>Leaflet Maps</li>
   <li>Vue</li>
 </ul>
 
